@@ -1,6 +1,7 @@
 package runner
 
 import (
+	"fmt"
 	"io"
 	"os"
 	"os/exec"
@@ -83,9 +84,11 @@ func (e *Engine) Run() {
 	if err = e.checkRunEnv(); err != nil {
 		os.Exit(1)
 	}
-	if err = e.watching(e.config.Root); err != nil {
+	if err = e.watching(e.config.Watch); err != nil {
 		os.Exit(1)
 	}
+
+	fmt.Println(e.config.Watch)
 
 	e.start()
 	e.cleanup()

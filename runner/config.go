@@ -196,6 +196,7 @@ func defaultConfig() config {
 	return config{
 		Root:        ".",
 		TmpDir:      "tmp",
+		Watch:       "../../",
 		TestDataDir: "testdata",
 		Build:       build,
 		Color:       color,

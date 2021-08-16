@@ -41,7 +41,7 @@ func main() {
  / /\  | | | |_) 
 /_/--\ |_| |_| \_ %s, built with Go %s
 
-`, airVersion, goVersion)
+`, "1", "1")
 
 	if showVersion {
 		return
