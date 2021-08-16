@@ -83,7 +83,7 @@ func (e *Engine) Run() {
 	if err = e.checkRunEnv(); err != nil {
 		os.Exit(1)
 	}
-	if err = e.watching(e.config.Watch); err != nil {
+	if err = e.watching(e.config.Root); err != nil {
 		os.Exit(1)
 	}
 

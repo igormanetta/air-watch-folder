@@ -21,7 +21,6 @@ const (
 )
 
 type config struct {
-	Watch       string   `toml:"watch"`
 	Root        string   `toml:"root"`
 	TmpDir      string   `toml:"tmp_dir"`
 	TestDataDir string   `toml:"testdata_dir"`
