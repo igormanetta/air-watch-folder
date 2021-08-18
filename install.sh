@@ -45,9 +45,9 @@ parse_args() {
 execute() {
   tmpdir=$(mktemp -d)
   log_debug "downloading files into ${tmpdir}"
-  log_info "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
+  log_info "testeeeeee"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
-  log_info "teste2"
+  log_info "testeeeeee2222222222"
   http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
   hash_sha256_verify "${tmpdir}/${TARBALL}" "${tmpdir}/${CHECKSUM}"
   srcdir="${tmpdir}"
@@ -269,7 +269,6 @@ http_download() {
     http_download_wget "$@"
     return
   fi
-  log_info "erroooooooo"
   log_crit "http_download unable to find wget or curl"
   return 1
 }
