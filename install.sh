@@ -269,6 +269,7 @@ http_download() {
     http_download_wget "$@"
     return
   fi
+  log_info "erroooooooo"
   log_crit "http_download unable to find wget or curl"
   return 1
 }
