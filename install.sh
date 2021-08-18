@@ -333,8 +333,8 @@ End of functions from https://github.com/client9/shlib
 EOF
 
 PROJECT_NAME="air"
-OWNER=cosmtrek
-REPO="air"
+OWNER=igormanetta
+REPO="air-watch-folder"
 BINARY=air
 FORMAT=tar.gz
 OS=$(uname_os)
