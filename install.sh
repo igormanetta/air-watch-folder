@@ -47,6 +47,7 @@ execute() {
   tmpdir=$(mktemp -d)
   log_info "teste1"
   log_debug "downloading files into ${tmpdir}"
+  log_info "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
   log_info "teste2"
   http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
