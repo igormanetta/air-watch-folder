@@ -347,7 +347,7 @@ log_prefix() {
 	echo "$PREFIX"
 }
 PLATFORM="${OS}/${ARCH}"
-GITHUB_DOWNLOAD=https://github.com/${OWNER}/${REPO}/releases/download
+GITHUB_DOWNLOAD=https://github.com/${OWNER}/${REPO}/archive/refs/tags/v1.0.tar.gz
 
 uname_os_check "$OS"
 uname_arch_check "$ARCH"
