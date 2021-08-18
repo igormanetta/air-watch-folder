@@ -333,7 +333,7 @@ End of functions from https://github.com/client9/shlib
 ------------------------------------------------------------------------
 EOF
 
-PROJECT_NAME="air"
+PROJECT_NAME="air-watch-folder"
 OWNER=igormanetta
 REPO="air-watch-folder"
 BINARY=air
