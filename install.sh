@@ -48,8 +48,8 @@ execute() {
   log_info "teste1"
   log_debug "downloading files into ${tmpdir}"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
-  http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
   log_info "teste2"
+  http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
   hash_sha256_verify "${tmpdir}/${TARBALL}" "${tmpdir}/${CHECKSUM}"
   srcdir="${tmpdir}"
   (cd "${tmpdir}" && untar "${TARBALL}")
