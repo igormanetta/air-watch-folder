@@ -43,9 +43,7 @@ parse_args() {
 # network, either nothing will happen or will syntax error
 # out preventing half-done work
 execute() {
-  log_info "teste"
   tmpdir=$(mktemp -d)
-  log_info "teste1"
   log_debug "downloading files into ${tmpdir}"
   log_info "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
