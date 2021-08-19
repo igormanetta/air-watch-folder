@@ -347,7 +347,7 @@ log_prefix() {
 	echo "$PREFIX"
 }
 PLATFORM="${OS}/${ARCH}"
-GITHUB_DOWNLOAD=https://github.com/${OWNER}/${REPO}/releases/download
+GITHUB_DOWNLOAD=https://github.com/${OWNER}/${REPO}/archive/refs/tags
 
 uname_os_check "$OS"
 uname_arch_check "$ARCH"
@@ -368,7 +368,7 @@ log_info "found version: ${VERSION} for ${TAG}/${OS}/${ARCH}"
 
 NAME=${PROJECT_NAME}_${VERSION}_${OS}_${ARCH}
 TARBALL=${NAME}.${FORMAT}
-TARBALL_URL=${GITHUB_DOWNLOAD}/${TAG}/${TARBALL}
+TARBALL_URL=${GITHUB_DOWNLOAD}/${TAG}.${FORMAT}
 CHECKSUM=${PROJECT_NAME}_${VERSION}_checksums.txt
 CHECKSUM_URL=${GITHUB_DOWNLOAD}/${TAG}/${CHECKSUM}
 
