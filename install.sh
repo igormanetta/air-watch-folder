@@ -47,7 +47,9 @@ execute() {
   log_debug "downloading files into ${tmpdir}"
   log_info "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
+  log_info "testeeeee"
   http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
+  log_info "teste1"
   hash_sha256_verify "${tmpdir}/${TARBALL}" "${tmpdir}/${CHECKSUM}"
   srcdir="${tmpdir}"
   (cd "${tmpdir}" && untar "${TARBALL}")
